@@ -41,3 +41,19 @@ To use the application, make a GET request to http://localhost:8080/data with th
 
 - http://localhost:8080/data?n=1 Returns the entire content of 1.txt.
 - http://localhost:8080/data?n=1&m=8 Returns the content at line 8 of 1.txt.
+
+## Bonus
+
+Pull the image from DockerHub to forego building the image.
+
+```bash
+docker pull hssaluja/assignment
+```
+
+Then directly run the Docker container:
+
+```bash
+docker run -p 8080:8080 --memory="1500m" --cpus="2.0" --name my-server hssaluja/assignment
+```
+
+This way you can run the server on file size greater than 100 MB each.
